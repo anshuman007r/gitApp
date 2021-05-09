@@ -7,6 +7,8 @@ function callAPI(type,request){
         console.log(url)
     }else if(type == 'userDetail'){
         url += `/${request}`
+    }else if( type == 'gistList' || type == 'repoList'){
+        url = API_URL +  `users/${request}/` + API_CONFIG[type].path
     }
     return new Promise((resolve, reject) => {
     fetch(url, {

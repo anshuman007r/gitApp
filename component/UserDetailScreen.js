@@ -12,12 +12,16 @@ export default class UserDetailScreen extends Component {
         }
         this.state={
             user,
-            userDetail : {}
+            userDetail : {},
+            repoList :[],
+            gistList: []
         }
     }
 
     componentDidMount(){
-        this.callUserAPI()
+        // this.callUserAPI()
+        // this.callRepoListAPI()
+        // this.callGistListAPI()
     }
 
     callUserAPI = () =>{
@@ -28,6 +32,25 @@ export default class UserDetailScreen extends Component {
             },()=>console.log(this.state.userDetail))
         })
     }
+
+    callRepoListAPI = () =>{
+        const { user } = this.state
+        callAPI('repoList',user).then((res)=>{
+            this.setState({
+                repoList :res
+            },()=>console.log(this.state.repoList))
+        })
+    }
+
+    callGistListAPI = () =>{
+        const { user } = this.state
+        callAPI('gistList',user).then((res)=>{
+            this.setState({
+                gistList :res
+            },()=>console.log(this.state.gistList))
+        })
+    }
+
     render() {
         return (
             <View>

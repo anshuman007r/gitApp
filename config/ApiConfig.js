@@ -12,6 +12,14 @@ const API_CONFIG ={
     userList:{
         path :"users",
         method : "GET"
+    },
+    repoList:{
+        path : "repos",
+        method : "GET"
+    },
+    gistList:{
+        path : "gist",
+        method : "GET" 
     }
 }
 
