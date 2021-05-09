@@ -18,7 +18,7 @@ const API_CONFIG ={
         method : "GET"
     },
     gistList:{
-        path : "gist",
+        path : "gists",
         method : "GET" 
     }
 }

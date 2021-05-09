@@ -26,7 +26,6 @@ export default class UserListingScreen extends Component {
 
     _renderUserList = (rowItem) => {
         const {item, index}  = rowItem;
-        console.log(item)
         return (
             <TouchableOpacity onPress={()=>this.props.navigation.navigate('UserDetailScreen',{user : item.login})} style={{backgroundColor:'#d4d4d4', width :'90%', alignSelf:'center',borderColor:'grey',borderWidth:1,borderRadius:10,paddingHorizontal :10, paddingVertical : 10,  marginTop :10,justifyContent :'center', flexDirection: "row"}} key={index}>
                 <View style ={{flex : 1.2, alignItems :'center', justifyContent :'center'}}>
@@ -73,7 +72,7 @@ export default class UserListingScreen extends Component {
         return (
             <Container>
                     <Header style={{backgroundColor:'#c3c3c3'}} iosBarStyle={"dark-content"} androidStatusBarColor={"#f3f3f3"} >
-                        <Left style={{ flex: 0.1,paddingLeft: widthPercentageToDP(3) }} disable>
+                        <Left style={{ flex: 0.1,paddingLeft: widthPercentageToDP(3) }}>
                         </Left>
                         <Body style={{ flex: 1 }}>
                             <View
@@ -86,7 +85,7 @@ export default class UserListingScreen extends Component {
                         </Body>
                         <Right onPress={() => { this.callSearchAPI() }} style={{ flex: 0.1,paddingRight: widthPercentageToDP(2) }}>
                             <TouchableOpacity onPress={() => { this.callSearchAPI() }}>
-                            <Image source={SearchIcon} style={{ height: 15, width: 15, position: "relative",fontSize:16}} />
+                            <Image source={SearchIcon} style={{ height: 15, width: 15, position: "relative"}} />
                             </TouchableOpacity>
                         </Right>
                         </Header>

@@ -31,6 +31,7 @@ export default StyleSheet.create({
     chat_header:{
         fontSize :22,fontFamily: 'WorkSans-Regular',flex:2.4
     },
+    image_container: { backgroundColor: '#c3c3c3', elevation: 8, padding: 10, borderRadius: 10, marginRight: 10, width: widthPercentageToDP(80) },
     homepage_header:{
         flex : 4
     },
